@@ -22,37 +22,41 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
+    category: "Jarvis Voice-Controlled Virtual Assistant",
+    title: "Voice-Controlled Virtual Assistant",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "Engineered an advanced voice-controlled assistant utilizing cutting-edge speech recognition and text-to-speech libraries, enabling fluid voice interaction. Enhanced system performance by 30% through optimization of voice recognition algorithms and cloud integration.",
+    stack: [
+      { name: "Python" }, 
+      { name: "Speech Recognition" }, 
+      { name: "pyttsx3" }
+    ],
+    image: "/assets/work/jarvis.png",
     live: "",
-    github: "",
+    github: "https://github.com/Vishwaspatel2401/Jarvis-Assistant",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "project 2",
+    category: "Garden Simulator",
+    title: "Garden Simulator",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+      "Developed an interactive Java-based Garden Simulation System that allows users to create and manage a virtual garden with dynamic environmental controls, real-time monitoring, and intelligent pest management. Leveraged JavaFX for the user interface and implemented features such as automated watering, plant-specific behaviors, and a live activity log. Integrated a modular architecture to support extensibility for various plant types and environmental conditions, ensuring scalability and maintainability.",
+    stack: [{ name: "Java" }, { name: "JavaFX" }, { name: "IntelliJ IDEA" }],
+    image: "/assets/work/Garden_Simlator.png",
     live: "",
-    github: "",
+    github: "https://github.com/Vishwaspatel2401/Garden_Managment_system",
   },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
-  },
+  // {
+  //   num: "03",
+  //   category: "frontend",
+  //   title: "project 3",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
+  //   stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+  //   image: "/assets/work/thumb3.png",
+  //   live: "",
+  //   github: "",
+  // },
 ];
 
 const Work = () => {
@@ -70,11 +74,11 @@ const Work = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.5, duration: 0.3, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="h-screen flex items-center overflow-hidden"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto h-full overflow-hidden">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
@@ -105,31 +109,35 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live && (
+                  <Link href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
                 {/* github project button */}
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.github && (
+                  <Link href={project.github}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Github repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -143,16 +151,18 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-[#232329]">
                       {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/20 z-10"></div>
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
-                          alt=""
+                          className="object-contain p-4"
+                          alt={project.title}
+                          priority
+                          quality={100}
                         />
                       </div>
                     </div>
@@ -162,7 +172,8 @@ const Work = () => {
               {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent hover:bg-accent/80 w-[44px] h-[44px] flex justify-center items-center transition-all"
+                iconsStyles="text-2xl"
               />
             </Swiper>
           </div>

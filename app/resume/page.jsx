@@ -7,47 +7,59 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython, 
+  FaUniversity,
+  FaGraduationCap,
+  FaJava,
+  FaGithub,
+  FaLinux,
+  FaDocker,
+  
 } from "react-icons/fa";
 
+import { SiFastapi } from "react-icons/si";
+import { DiMysql, DiPostgresql } from "react-icons/di";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { PiCertificateBold } from "react-icons/pi";
+import { MdSchool } from "react-icons/md";
 
 // about data
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Master's student in Computer Science at Santa Clara University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman",
+      fieldValue: "Vishwas Patel",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678",
+      fieldValue: "(+1) 669-340-8432",
     },
+    // {
+    //   fieldName: "Experience",
+    //   fieldValue: "2+ Years",
+    // },
     {
-      fieldName: "Experience",
-      fieldValue: "12+ Years",
+      fieldName: "Location",
+      fieldValue: "Santa Clara, CA",
     },
-    {
-      fieldName: "Skype",
-      fieldValue: "luke.01",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "American",
-    },
+    // {
+    //   fieldName: "Nationality",
+    //   fieldValue: "Indian",
+    // },
     {
       fieldName: "Email",
-      fieldValue: "luke.01@gmail.com",
+      fieldValue: "vishwaspatel2401@gmail.com",
     },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
+    // {
+    //   fieldName: "Freelance",
+    //   fieldValue: "Available",
+    // },
     {
       fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldValue: "English, Hindi, Gujarati",
     },
   ],
 };
@@ -56,39 +68,22 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  // description: "My professional journey in software development and engineering",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "Shaip",
+      position: "Software Developer Intern",
+      duration: "Aug 2023 - Feb 2024",
+      location: "Ahmedabad, Gujarat, India",
+      logo: "/assets/companies/shaip-logo.svg"
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
-    },
-    {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
-    },
-    {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
-    },
-    {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
-    },
+      company: "SkyInfo Solutions",
+      position: "Data Science Intern",
+      duration: "Feb 2023 - Apr 2023",
+      location: "Ahmedabad, Gujarat, India",
+      logo: "/assets/companies/skyinfo-logo.svg"
+    }
   ],
 };
 
@@ -96,48 +91,43 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  // description: "My academic journey in Computer Science and Engineering",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      institution: "Santa Clara University",
+      degree: "Master of Science in Computer Science",
+      duration: "2024 - 2026",
+      logo: "/assets/institutions/scu-logo.svg",
+      location: "Santa Clara, CA, USA",
+      gpa: "3.5/4",
+      coursework: "Computer Architecture, Object Oriented Programming, Database Management Systems, Machine Learning, Design Patterns, "
     },
     {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022",
-    },
-    {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
-    },
-    {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
-    },
-    {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
-    },
+      institution: "Gujarat Technological University",
+      degree: "Bachelor of Engineering in Computer Engineering",
+      duration: "2019 - 2023",
+      logo: "/assets/institutions/gtu-logo.svg",
+      location: "Gandhinagar, Gujarat, India",
+      gpa: "3.74/4",
+      coursework: "Data Structures & Algorithms, Theory of Computation, Operating Systems, Computer Networks, Computer Organization and Architecture, Software Engineering, , Python for Data Science"
+    }
   ],
 };
 
 // skills data
 const skills = {
   title: "My skills",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  // description:
+  //   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   skillList: [
+    {
+      icon: <FaPython />,
+      name: "python",
+    },
+    {
+      icon: <FaJava />,
+      name: "java",
+    },
     {
       icon: <FaHtml5 />,
       name: "html 5",
@@ -146,30 +136,37 @@ const skills = {
       icon: <FaCss3 />,
       name: "css 3",
     },
+    
     {
       icon: <FaJs />,
       name: "javascript",
     },
     {
-      icon: <FaReact />,
-      name: "react.js",
+      icon: <DiMysql />,
+      name: "mysql",
     },
     {
-      icon: <SiNextdotjs />,
-      name: "next.js",
+      icon: <DiPostgresql />,
+      name: "postgresql",
     },
     {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
+      icon: <SiFastapi />,
+      name: "fastapi",
     },
     {
-      icon: <FaNodeJs />,
-      name: "node.js",
+      icon: <FaLinux />,
+      name: "linux",
     },
     {
-      icon: <FaFigma />,
-      name: "figma",
+      icon: <FaDocker />,
+      name: "docker",
     },
+    
+    
+    
+    
+    
+    
   ],
 };
 
@@ -191,24 +188,24 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.5, duration: 0.3, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="h-screen flex items-center justify-center py-12 xl:py-0 overflow-hidden"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto h-full overflow-hidden">
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience" className="border-b-2 border-transparent data-[state=active]:border-accent">Experience</TabsTrigger>
+            <TabsTrigger value="education" className="border-b-2 border-transparent data-[state=active]:border-accent">Education</TabsTrigger>
+            <TabsTrigger value="skills" className="border-b-2 border-transparent data-[state=active]:border-accent">Skills</TabsTrigger>
+            <TabsTrigger value="about" className="border-b-2 border-transparent data-[state=active]:border-accent">About me</TabsTrigger>
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full overflow-hidden">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -222,16 +219,26 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[220px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
+                          {/* Logo */}
+                          <div className="w-12 h-12 mb-2">
+                            <img 
+                              src={item.logo} 
+                              alt={item.company}
+                              className="w-full h-full object-contain invert"
+                            />
+                          </div>
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
                           </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                          <div className="flex flex-col items-center lg:items-start gap-1">
+                            <div className="flex items-center gap-3">
+                              <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                              <p className="text-white/60">{item.company}</p>
+                            </div>
+                            <p className="text-white/40 text-sm">{item.location}</p>
                           </div>
                         </li>
                       );
@@ -254,16 +261,41 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] p-8 rounded-xl flex flex-col gap-6"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {/* Logo and Duration */}
+                          <div className="flex items-start gap-4">
+                            <div className="w-12 h-12">
+                              <img 
+                                src={item.logo} 
+                                alt={item.institution}
+                                className="w-full h-full object-contain invert"
+                              />
+                            </div>
+                            <span className="text-accent text-lg">{item.duration}</span>
+                          </div>
+
+                          {/* Degree */}
+                          <h3 className="text-2xl font-semibold leading-tight">
                             {item.degree}
                           </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
+
+                          {/* Institution and Location */}
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-3">
+                              <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                              <p className="text-gray-400 text-lg">{item.institution}</p>
+                            </div>
+                            <p className="text-gray-500 text-base">{item.location}</p>
+                          </div>
+                          
+                          {/* GPA and Coursework */}
+                          <div className="space-y-4">
+                            <p className="text-accent text-lg font-semibold">GPA: {item.gpa}</p>
+                            <div>
+                              <p className="text-gray-400 text-lg mb-2">Key Coursework:</p>
+                              <p className="text-gray-500 text-base leading-relaxed">{item.coursework}</p>
+                            </div>
                           </div>
                         </li>
                       );
@@ -306,10 +338,7 @@ const Resume = () => {
             </TabsContent>
 
             {/* about */}
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
+            <TabsContent value="about" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">

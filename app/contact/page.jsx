@@ -3,88 +3,135 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+40) 321 654 876",
+    description: "(+1) 669-340-8432",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
+    description: "vishwaspatel2401@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Code Corner, Tech Town 13579",
+    description: "Santa Clara, CA, USA",
   },
 ];
 
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    // Initialize EmailJS
+    emailjs.init("Sf388lizj6g1UZ9--");
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus('');
+    setErrorMessage('');
+
+    const form = e.target;
+
+    try {
+      const result = await emailjs.sendForm(
+        'service_nq1drhr',
+        'template_h2u8djg',
+        form,
+        'Sf388lizj6g1UZ9--'
+      );
+
+      console.log('Success:', result.text);
+      setStatus('success');
+      form.reset(); // Clear the form
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setStatus('error');
+      setErrorMessage(error.text || 'Failed to send message. Please try again.');
+    }
+
+    setIsLoading(false);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.5, duration: 0.3, ease: "easeIn" },
       }}
-      className="py-6"
+      className="h-screen flex items-center overflow-hidden"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto h-full overflow-hidden">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
-                nihil sapiente pariatur id totam.
+                I'm always open to new opportunities and collaborations. Let's connect and create something great together.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input 
+                  name="from_name" 
+                  type="text" 
+                  placeholder="First Name" 
+                  required 
+                />
+                <Input 
+                  name="last_name" 
+                  type="text" 
+                  placeholder="Last Name" 
+                  required 
+                />
+                <Input 
+                  name="from_email" 
+                  type="email" 
+                  placeholder="Email Address" 
+                  required 
+                />
+                <Input 
+                  name="phone" 
+                  type="tel" 
+                  placeholder="Phone Number" 
+                  required 
+                />
               </div>
-              {/* select */}
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
               {/* textarea */}
               <Textarea
+                name="message"
                 className="h-[200px]"
                 placeholder="Type your message here."
+                required
               />
+              {/* Status message */}
+              {status === 'success' && (
+                <p className="text-green-500">Thank you! Your message has been sent successfully.</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-500">{errorMessage}</p>
+              )}
               {/* btn */}
-              <Button size="md" className="max-w-40">
-                Send message
+              <Button 
+                type="submit" 
+                size="md" 
+                className="max-w-40 text-white"
+                disabled={isLoading}
+              >
+                {isLoading ? 'Sending...' : 'Send message'}
               </Button>
             </form>
           </div>
@@ -112,4 +159,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; 

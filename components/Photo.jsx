@@ -20,15 +20,21 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[280px] h-[280px] xl:w-[480px] xl:h-[480px] mix-blend-screen absolute left-[10px] xl:left-[13px] top-[10px] xl:top-[13px]"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/photo.png?v=2"
             priority
             quality={100}
             fill
-            alt=""
-            className="object-contain"
+            alt="Vishwas Patel"
+            className="object-cover rounded-full"
+            style={{
+              objectPosition: "center center",
+              objectFit: "cover",
+              mixBlendMode: "screen",
+              transform: "scale(0.95)"
+            }}
           />
         </motion.div>
 
@@ -43,7 +49,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
+            stroke="hsl(var(--accent))"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
