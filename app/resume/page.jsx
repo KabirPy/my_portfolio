@@ -22,12 +22,13 @@ import { DiMysql, DiPostgresql } from "react-icons/di";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { PiCertificateBold } from "react-icons/pi";
 import { MdSchool } from "react-icons/md";
+import Image from "next/image";
 
 // about data
 const about = {
   title: "About me",
   description:
-    "Master's student in Computer Science at Santa Clara University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
+    "Master&apos;s student in Computer Science at Santa Clara University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
   info: [
     {
       fieldName: "Name",
@@ -222,11 +223,12 @@ const Resume = () => {
                           className="bg-[#232329] h-[220px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           {/* Logo */}
-                          <div className="w-12 h-12 mb-2">
-                            <img 
+                          <div className="w-12 h-12 mb-2 relative">
+                            <Image 
                               src={item.logo} 
                               alt={item.company}
-                              className="w-full h-full object-contain invert"
+                              fill
+                              className="object-contain invert"
                             />
                           </div>
                           <span className="text-accent">{item.duration}</span>
@@ -265,11 +267,12 @@ const Resume = () => {
                         >
                           {/* Logo and Duration */}
                           <div className="flex items-start gap-4">
-                            <div className="w-12 h-12">
-                              <img 
+                            <div className="w-12 h-12 relative">
+                              <Image 
                                 src={item.logo} 
                                 alt={item.institution}
-                                className="w-full h-full object-contain invert"
+                                fill
+                                className="object-contain invert"
                               />
                             </div>
                             <span className="text-accent text-lg">{item.duration}</span>
