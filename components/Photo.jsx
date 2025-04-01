@@ -10,7 +10,7 @@ const Photo = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+          transition: { delay: 0.2, duration: 0.3, ease: "easeIn" },
         }}
       >
         {/* image */}
@@ -18,15 +18,16 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+            transition: { delay: 0.3, duration: 0.3, ease: "easeInOut" },
           }}
           className="w-[280px] h-[280px] xl:w-[480px] xl:h-[480px] mix-blend-screen absolute left-[10px] xl:left-[13px] top-[10px] xl:top-[13px]"
         >
           <Image
-            src="/assets/photo.png?v=2"
+            src="/assets/photo.png"
             priority
-            quality={100}
+            quality={85}
             fill
+            sizes="(max-width: 768px) 280px, 480px"
             alt="Vishwas Patel"
             className="object-cover rounded-full"
             style={{
