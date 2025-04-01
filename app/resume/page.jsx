@@ -223,7 +223,7 @@ const Resume = () => {
                           className="bg-[#232329] h-[220px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           {/* Logo */}
-                          <div className="w-12 h-12 mb-2 relative">
+                          <div className="w-16 h-16 mb-2 relative">
                             <Image 
                               src={item.logo} 
                               alt={item.company}
