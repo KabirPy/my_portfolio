@@ -69,21 +69,18 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  // description: "My professional journey in software development and engineering",
   items: [
     {
       company: "Shaip",
       position: "Software Developer Intern",
       duration: "Aug 2023 - Feb 2024",
-      location: "Ahmedabad, Gujarat, India",
-      logo: "/assets/companies/shaip-logo.svg"
+      location: "Ahmedabad, Gujarat, India"
     },
     {
       company: "SkyInfo Solutions",
       position: "Data Science Intern",
       duration: "Feb 2023 - Apr 2023",
-      location: "Ahmedabad, Gujarat, India",
-      logo: "/assets/companies/skyinfo-logo.svg"
+      location: "Ahmedabad, Gujarat, India"
     }
   ],
 };
@@ -92,13 +89,11 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  // description: "My academic journey in Computer Science and Engineering",
   items: [
     {
       institution: "Santa Clara University",
       degree: "Master of Science in Computer Science",
       duration: "2024 - 2026",
-      logo: "/assets/institutions/scu-logo.svg",
       location: "Santa Clara, CA, USA",
       gpa: "3.5/4",
       coursework: "Computer Architecture, Object Oriented Programming, Database Management Systems, Machine Learning, Design Patterns, "
@@ -107,7 +102,6 @@ const education = {
       institution: "Gujarat Technological University",
       degree: "Bachelor of Engineering in Computer Engineering",
       duration: "2019 - 2023",
-      logo: "/assets/institutions/gtu-logo.svg",
       location: "Gandhinagar, Gujarat, India",
       gpa: "3.74/4",
       coursework: "Data Structures & Algorithms, Theory of Computation, Operating Systems, Computer Networks, Computer Organization and Architecture, Software Engineering, , Python for Data Science"
@@ -222,15 +216,6 @@ const Resume = () => {
                           key={index}
                           className="bg-[#232329] h-[220px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
-                          {/* Logo */}
-                          <div className="w-16 h-16 mb-2 relative">
-                            <Image 
-                              src={item.logo} 
-                              alt={item.company}
-                              fill
-                              className="object-contain invert"
-                            />
-                          </div>
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
@@ -265,18 +250,8 @@ const Resume = () => {
                           key={index}
                           className="bg-[#232329] p-8 rounded-xl flex flex-col gap-6"
                         >
-                          {/* Logo and Duration */}
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 relative">
-                              <Image 
-                                src={item.logo} 
-                                alt={item.institution}
-                                fill
-                                className="object-contain invert"
-                              />
-                            </div>
-                            <span className="text-accent text-lg">{item.duration}</span>
-                          </div>
+                          {/* Duration */}
+                          <span className="text-accent text-lg">{item.duration}</span>
 
                           {/* Degree */}
                           <h3 className="text-2xl font-semibold leading-tight">
