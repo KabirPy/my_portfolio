@@ -27,7 +27,7 @@ const Home = () => {
               Hello I&apos;m <br /> <span className="text-accent">Vishwas Patel</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Master&apos;s student in Computer Science at Santa Clara University with expertise in full-stack development,
+              Masters student in Computer Science at Santa Clara University with expertise in full-stack development,
               machine learning, and cloud technologies. Experienced in building scalable applications and implementing
               efficient data processing solutions.
             </p>
