@@ -27,9 +27,7 @@ const Home = () => {
               Hello I&apos;m <br /> <span className="text-accent">Vishwas Patel</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Masters student in Computer Science at Santa Clara University with expertise in full-stack development,
-              machine learning, and cloud technologies. Experienced in building scalable applications and implementing
-              efficient data processing solutions.
+             
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
