@@ -28,7 +28,7 @@ import Image from "next/image";
 const about = {
   title: "About me",
   description:
-    "Master&apos;s student in Computer Science at Santa Clara University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
+    "Master's student in Computer Science at Santa Clara University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
   info: [
     {
       fieldName: "Name",
