@@ -27,7 +27,7 @@ const Home = () => {
               Hello Im <br /> <span className="text-accent">Vishwas Patel</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-             I am a software engineer with a passion for building scalable and efficient applications. I am currently a master's student in Computer Science at Santa Clara University.
+             I am a software engineer with a passion for building scalable and efficient applications. I am currently a master&apos;s student in Computer Science at Santa Clara University.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
