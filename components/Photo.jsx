@@ -23,18 +23,18 @@ const Photo = () => {
           className="w-[280px] h-[280px] xl:w-[480px] xl:h-[480px] mix-blend-screen absolute left-[10px] xl:left-[13px] top-[10px] xl:top-[13px]"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/Kabir_profile.png"
             priority
             quality={85}
             fill
             sizes="(max-width: 768px) 280px, 480px"
-            alt="Vishwas Patel"
+            alt="Kabir Shah"
             className="object-cover rounded-full"
             style={{
-              objectPosition: "center center",
+              objectPosition: "center 58%",
               objectFit: "cover",
               mixBlendMode: "screen",
-              transform: "scale(0.95)"
+              transform: "scale(1.02)"
             }}
           />
         </motion.div>
@@ -50,7 +50,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="hsl(var(--accent))"
+            stroke="#4fd1b3"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -29,7 +29,66 @@
     @apply border-[hsl(var(--border))];
   }
   body {
-    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+    background: #11201f;
+    color: #e6f1ef;
+    font-family: 'Inter', Arial, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  header, .header {
+    background: #162826;
+    color: #e6f1ef;
+    box-shadow: none;
+  }
+
+  .card, .section, .resume-card, .work-card, .contact-form-bg {
+    background: #11201f !important;
+    color: #e6f1ef;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px #0002;
+  }
+
+  form, .form-bg, .contact-form {
+    background: #11201f !important;
+    color: #e6f1ef;
+  }
+
+  a, .text-accent, .accent, .home-name-accent {
+    color: #36e0e0 !important;
+  }
+
+  .button, .btn, .hire-btn {
+    background: #36e0e0 !important;
+    color: #11201f;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px #0002;
+  }
+  .button:hover, .btn:hover, .hire-btn:hover {
+    background: #2ad2d2 !important;
+    color: #11201f;
+  }
+
+  input, textarea, select {
+    background: #162826 !important;
+    color: #e6f1ef;
+    border: 1px solid #36e0e0;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #7fdac7;
+    opacity: 1;
+  }
+
+  ::-webkit-scrollbar {
+    background: #162826;
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #36e0e0;
+    border-radius: 4px;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -63,4 +122,23 @@
 
 .border-accent {
   border-color: hsl(var(--accent));
+}
+
+.navbar a.active, .navbar a:hover {
+  color: #36e0e0 !important;
+  border-bottom: 2px solid #fff !important;
+}
+
+.hire-btn {
+  background: #36e0e0 !important;
+  color: #11201f !important;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+.hire-btn:hover {
+  background: #2ad2d2 !important;
+  color: #11201f !important;
 }

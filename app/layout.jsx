@@ -13,8 +13,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Vishwas Patel | Portfolio",
-  description: "Software Engineer and Master's student in Computer Science at Santa Clara University",
+  title: "Kabir Shah | Portfolio",
+  description: "Software Engineer and Master's student in Computer Science at Northeastern University",
   icons: {
     icon: '/favicon.ico',
   },

@@ -22,41 +22,20 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Jarvis Voice-Controlled Virtual Assistant",
-    title: "Voice-Controlled Virtual Assistant",
+    category: "Unique ID Management System",
+    title: "Unique ID Management System",
     description:
-      "Engineered an advanced voice-controlled assistant utilizing cutting-edge speech recognition and text-to-speech libraries, enabling fluid voice interaction. Enhanced system performance by 30% through optimization of voice recognition algorithms and cloud integration.",
+      "Engineered a robust identity management platform for user authentication and comprehensive data logging to enable advanced user behavior analytics, boosting system accuracy by 30% and reducing processing time by 25% for over 1,000 users.",
     stack: [
-      { name: "Python" }, 
-      { name: "Speech Recognition" }, 
-      { name: "pyttsx3" }
+      { name: "Python" },
+      { name: "MySQL" },
+      { name: "CSS" },
+      { name: "JavaScript" }
     ],
-    image: "/assets/work/jarvis.png",
+    image: "/assets/photo.png",
     live: "",
-    github: "https://github.com/Vishwaspatel2401/Jarvis-Assistant",
-  },
-  {
-    num: "02",
-    category: "Garden Simulator",
-    title: "Garden Simulator",
-    description:
-      "Developed an interactive Java-based Garden Simulation System that allows users to create and manage a virtual garden with dynamic environmental controls, real-time monitoring, and intelligent pest management. Leveraged JavaFX for the user interface and implemented features such as automated watering, plant-specific behaviors, and a live activity log. Integrated a modular architecture to support extensibility for various plant types and environmental conditions, ensuring scalability and maintainability.",
-    stack: [{ name: "Java" }, { name: "JavaFX" }, { name: "IntelliJ IDEA" }],
-    image: "/assets/work/Garden_Simlator.png",
-    live: "",
-    github: "https://github.com/Vishwaspatel2401/Garden_Managment_system",
-  },
-  // {
-  //   num: "03",
-  //   category: "frontend",
-  //   title: "project 3",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-  //   stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-  //   image: "/assets/work/thumb3.png",
-  //   live: "",
-  //   github: "",
-  // },
+    github: ""
+  }
 ];
 
 const Work = () => {
@@ -76,14 +55,14 @@ const Work = () => {
         opacity: 1,
         transition: { delay: 0.5, duration: 0.3, ease: "easeIn" },
       }}
-      className="h-screen flex items-center overflow-hidden"
+      className="h-screen flex items-center overflow-hidden pt-24"
     >
       <div className="container mx-auto h-full overflow-hidden">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              <div className="text-8xl leading-none font-extrabold text-transparent" style={{ WebkitTextStroke: '2px #36e0e0' }}>
                 {project.num}
               </div>
               {/* project category */}

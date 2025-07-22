@@ -28,36 +28,28 @@ import Image from "next/image";
 const about = {
   title: "About me",
   description:
-    "Master's student in Computer Science at Santa Clara University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
+    "Master's student in Computer Science at Northeastern University with expertise in full-stack development, machine learning, and cloud technologies. Experienced in building scalable applications and implementing efficient data processing solutions.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Vishwas Patel",
+      fieldValue: "Kabir Shah",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+1) 669-340-8432",
+      fieldValue: "857-384-8674",
     },
-    // {
-    //   fieldName: "Experience",
-    //   fieldValue: "2+ Years",
-    // },
     {
       fieldName: "Location",
-      fieldValue: "Santa Clara, CA",
+      fieldValue: "Boston, MA",
     },
-    // {
-    //   fieldName: "Nationality",
-    //   fieldValue: "Indian",
-    // },
     {
       fieldName: "Email",
-      fieldValue: "vishwaspatel2401@gmail.com",
+      fieldValue: "kabir.is187@gmail.com",
     },
-    // {
-    //   fieldName: "Freelance",
-    //   fieldValue: "Available",
-    // },
+    {
+      fieldName: "LinkedIn",
+      fieldValue: "kabir-shah-m76197",
+    },
     {
       fieldName: "Languages",
       fieldValue: "English, Hindi, Gujarati",
@@ -71,16 +63,36 @@ const experience = {
   title: "My experience",
   items: [
     {
-      company: "Shaip",
-      position: "Software Developer Intern",
-      duration: "Aug 2023 - Feb 2024",
-      location: "Ahmedabad, Gujarat, India"
+      company: "Brainer Hub Solutions",
+      position: "Jr Data Scientist",
+      duration: "Jun 2023 - Dec 2024",
+      location: "Ahmedabad, India",
+      bullets: [
+        "Developed and maintained advanced data processing systems for diverse projects—including an electric & gas bill automation tool, an NLP-based medical report extraction system for a biotech firm, and a university analytics portal—resulting in a 40% reduction in data errors and a 35% boost in processing throughput.",
+        "Designed and deployed an NLP-driven document parsing framework for high-volume medical reports (processing 10,000+ documents/month), leveraging named entity recognition, classification, and pattern-based extraction to enhance clinical tagging accuracy by 30% and reduce manual review time by 60%.",
+        "Implemented robust automated testing frameworks and CI/CD pipelines to validate model performance and data integrity, collaborating within agile teams to expedite deployment cycles by 20% and elevate system reliability by 30%."
+      ]
     },
     {
-      company: "SkyInfo Solutions",
-      position: "Data Science Intern",
-      duration: "Feb 2023 - Apr 2023",
-      location: "Ahmedabad, Gujarat, India"
+      company: "Brainer Hub Solutions",
+      position: "Data-Science Intern",
+      duration: "May 2023 - Jun 2023",
+      location: "Ahmedabad, India",
+      bullets: [
+        "Engineered scalable data ingestion and analytics pipelines for a real estate and social engagement platform using Django, Flask, FastAPI, and pandas; optimized operational analytics by 60% and improved platform responsiveness by 25%.",
+        "Integrated a high-precision facial recognition analytics module for corporate security enhancements using TensorFlow, Keras, and PyTorch to extract actionable features, boosting recognition accuracy by 30% and reducing processing latency by 35%.",
+        "Coordinated iterative feature enhancement and testing protocols, refining model outputs and data processing pipelines, reducing deployment time and enhanced analytical precision."
+      ]
+    },
+    {
+      company: "E-Seller Hub",
+      position: "Data-Science Intern",
+      duration: "Jan 2023 - Apr 2023",
+      location: "Ahmedabad, India",
+      bullets: [
+        "Developed robust Python-based data pipelines for data transformation, and predictive modeling across multi-channel retail operations, improving forecasting and shortening decision latency by 15%.",
+        "Implemented cloud-native deployment strategies, integrating advanced statistical models with automated error-handling frameworks, boosting reporting accuracy by 45% while ensuring scalable data processing."
+      ]
     }
   ],
 };
@@ -91,20 +103,16 @@ const education = {
   title: "My education",
   items: [
     {
-      institution: "Santa Clara University",
+      institution: "Northeastern University",
       degree: "Master of Science in Computer Science",
-      duration: "2024 - 2026",
-      location: "Santa Clara, CA, USA",
-      gpa: "3.5/4",
-      coursework: "Computer Architecture, Object Oriented Programming, Database Management Systems, Machine Learning, Design Patterns, "
+      duration: "Jan 2025 - May 2027",
+      location: "Boston, MA"
     },
     {
       institution: "Gujarat Technological University",
       degree: "Bachelor of Engineering in Computer Engineering",
-      duration: "2019 - 2023",
-      location: "Gandhinagar, Gujarat, India",
-      gpa: "3.74/4",
-      coursework: "Data Structures & Algorithms, Theory of Computation, Operating Systems, Computer Networks, Computer Organization and Architecture, Software Engineering, , Python for Data Science"
+      duration: "Aug 2019 - May 2023",
+      location: "Gandhinagar, India"
     }
   ],
 };
@@ -112,56 +120,28 @@ const education = {
 // skills data
 const skills = {
   title: "My skills",
-  // description:
-  //   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   skillList: [
-    {
-      icon: <FaPython />,
-      name: "python",
-    },
-    {
-      icon: <FaJava />,
-      name: "java",
-    },
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3",
-    },
-    
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <DiMysql />,
-      name: "mysql",
-    },
-    {
-      icon: <DiPostgresql />,
-      name: "postgresql",
-    },
-    {
-      icon: <SiFastapi />,
-      name: "fastapi",
-    },
-    {
-      icon: <FaLinux />,
-      name: "linux",
-    },
-    {
-      icon: <FaDocker />,
-      name: "docker",
-    },
-    
-    
-    
-    
-    
-    
+    { icon: <FaPython />, name: "Python" },
+    { icon: <FaJava />, name: "Java" },
+    { icon: <FaHtml5 />, name: "HTML5" },
+    { icon: <FaCss3 />, name: "CSS3" },
+    { icon: <FaJs />, name: "JavaScript" },
+    { icon: <DiMysql />, name: "MySQL" },
+    { icon: <FaPython />, name: "PyTorch" },
+    { icon: <FaPython />, name: "TensorFlow" },
+    { icon: <FaPython />, name: "Keras" },
+    { icon: <FaPython />, name: "Pandas" },
+    { icon: <FaPython />, name: "NumPy" },
+    { icon: <FaPython />, name: "Scikit-learn" },
+    { icon: <FaPython />, name: "spaCy" },
+    { icon: <FaPython />, name: "Matplotlib" },
+    { icon: <FaPython />, name: "Seaborn" },
+    { icon: <FaPython />, name: "Hadoop" },
+    { icon: <FaPython />, name: "OpenCV" },
+    { icon: <FaPython />, name: "MongoDB" },
+    { icon: <FaPython />, name: "AWS" },
+    { icon: <FaPython />, name: "GCP" },
+    { icon: <FaPython />, name: "Azure" },
   ],
 };
 
@@ -185,7 +165,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 0.5, duration: 0.3, ease: "easeIn" },
       }}
-      className="h-screen flex items-center justify-center py-12 xl:py-0 overflow-hidden"
+      className="h-screen flex items-center justify-center py-12 xl:py-0 overflow-hidden pt-24"
     >
       <div className="container mx-auto h-full overflow-hidden">
         <Tabs
@@ -216,7 +196,7 @@ const Resume = () => {
                           key={index}
                           className="bg-[#232329] h-[220px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-accent">{item.duration}</span>
+                          <span className="text-[#36e0e0] text-lg">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
                           </h3>
@@ -251,7 +231,7 @@ const Resume = () => {
                           className="bg-[#232329] p-8 rounded-xl flex flex-col gap-6"
                         >
                           {/* Duration */}
-                          <span className="text-accent text-lg">{item.duration}</span>
+                          <span className="text-[#36e0e0] text-lg">{item.duration}</span>
 
                           {/* Degree */}
                           <h3 className="text-2xl font-semibold leading-tight">
@@ -269,7 +249,6 @@ const Resume = () => {
                           
                           {/* GPA and Coursework */}
                           <div className="space-y-4">
-                            <p className="text-accent text-lg font-semibold">GPA: {item.gpa}</p>
                             <div>
                               <p className="text-gray-400 text-lg mb-2">Key Coursework:</p>
                               <p className="text-gray-500 text-base leading-relaxed">{item.coursework}</p>
