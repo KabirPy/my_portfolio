@@ -1,5 +1,5 @@
 import { FaPython, FaJava, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaAws, FaCloud, FaCogs, FaBrain, FaChartBar, FaServer, FaCode } from 'react-icons/fa';
-import { SiCplusplus, SiC, SiDjango, SiFlask, SiFastapi, SiPandas, SiNumpy, SiScikitlearn, SiXgboost, SiTensorflow, SiKeras, SiPytorch, SiSpacy, SiApachehadoop, SiMongodb, SiGooglecloud, SiMicrosoftazure, SiOpencv, SiPlotly, SiSeaborn, SiMysql } from 'react-icons/si';
+import { SiCplusplus, SiC, SiDjango, SiFlask, SiFastapi, SiPandas, SiNumpy, SiScikitlearn, SiXgboost, SiTensorflow, SiKeras, SiPytorch, SiSpacy, SiApachehadoop, SiMongodb, SiGooglecloud, SiMicrosoftazure, SiOpencv, SiPlotly, SiSeaborn, SiMysql, SiMatplotlib } from 'react-icons/si';
 
 const skills = [
   // Languages
