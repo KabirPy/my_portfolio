@@ -22,12 +22,12 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Engineer</span>
+            <span className="text-xl">Data Science Enthusiast</span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br /> <span className="home-name-accent">Kabir Shah</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-             I am a software engineer with a passion for building scalable and efficient applications. Currently a master&apos;s student in Computer Science at Northeastern University.
+             I’m a data science enthusiast who designs scalable, efficient data pipelines and uncovers actionable insights from complex datasets. I’m currently pursuing my MS in Computer Science at Northeastern University.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
