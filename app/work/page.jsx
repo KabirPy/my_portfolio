@@ -32,7 +32,7 @@ const projects = [
       { name: "CSS" },
       { name: "JavaScript" }
     ],
-    image: "/assets/Screenshot 2025-07-21 at 11.23.04 PM.png",
+    image: "/assets/work/uid-management-system.png",
     live: "",
     github: ""
   }
@@ -136,7 +136,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-contain p-4 mix-blend-multiply"
+                          className="object-contain p-4"
                           alt={project.title}
                           priority
                           quality={100}
