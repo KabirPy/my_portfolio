@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata = {
   title: "Kabir Shah | Portfolio",
-  description: "Software Engineer and Master's student in Computer Science at Northeastern University",
+  description: "I’m a data scientist who designs scalable, efficient data pipelines and uncovers actionable insights from complex datasets. I’m currently pursuing my MS in Computer Science at Northeastern University.",
   icons: {
     icon: '/favicon.ico',
   },
