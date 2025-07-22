@@ -44,11 +44,7 @@ const about = {
     },
     {
       fieldName: "Email",
-      fieldValue: "kabir.is187@gmail.com",
-    },
-    {
-      fieldName: "LinkedIn",
-      fieldValue: "kabir-shah-m76197",
+      fieldValue: "kabir.js187@gmail.com",
     },
     {
       fieldName: "Languages",
