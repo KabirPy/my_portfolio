@@ -102,8 +102,8 @@ const Work = () => {
                     </TooltipProvider>
                   </Link>
                 )}
-                {/* github project button */}
-                {project.github && (
+                {/* github project button - commented out for now */}
+                {/* {project.github && (
                   <Link href={project.github}>
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
@@ -116,7 +116,7 @@ const Work = () => {
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
-                )}
+                )} */}
               </div>
             </div>
           </div>
