@@ -32,7 +32,7 @@ const projects = [
       { name: "CSS" },
       { name: "JavaScript" }
     ],
-    image: "/assets/photo.png",
+    image: "/assets/Screenshot 2025-07-21 at 11.23.04 PM.png",
     live: "",
     github: ""
   }
