@@ -16,7 +16,7 @@ const contactDetails = [
   {
     icon: <FaEnvelope />,
     label: 'Email',
-    value: 'kabir.is187@gmail.com',
+    value: 'kabir.js187@gmail.com',
   },
   {
     icon: <FaMapMarkerAlt />,
