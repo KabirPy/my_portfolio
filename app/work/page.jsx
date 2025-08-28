@@ -20,7 +20,6 @@ import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
-  ,
   {
     num: "01",
     category: "Supply Chain Performance Analytics Dashboard",
