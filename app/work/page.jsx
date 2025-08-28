@@ -28,7 +28,7 @@ const projects = [
     description:
       "Developed an end-to-end analytics solution to monitor supplier delivery performance and inventory levels. Built ETL pipelines to clean and aggregate raw order and lead-time data into a centralized SQL data mart. Designed action-driven Tableau dashboards highlighting on-time delivery rates and stock-out risks to enable proactive decisions, and optimized queries to cut dashboard load time by ~40% for cross-functional stakeholders.",
     stack: [{ name: "Python" }, { name: "SQL" }, { name: "Tableau" }],
-    image: "/assets/work/supply-chain-dashboard.png", // add this image
+    image: "/assets/work/Supply Chain Performance Analytics Dashboard", 
     live: "",
     github: ""
   },
@@ -39,7 +39,7 @@ const projects = [
     description:
       "Created a scalable insights platform to support data requests across logistics, operations, and purchasing. Consolidated disparate operational datasets into a query-optimized relational schema, improving ad-hoc query performance by ~50%. Built interactive Tableau dashboards with drill-downs and parameterized queries to answer high-impact business questions, and authored user docs and tutorials to drive adoption and data literacy for non-technical users.",
     stack: [{ name: "SQL" }, { name: "Python" }, { name: "Tableau" }, { name: "Excel" }],
-    image: "/assets/work/ad-hoc-insights-platform.png", // add this image
+    image: "/assets/work/Ad-hoc Insights Platform for Operational Data", 
     live: "",
     github: ""
   },
